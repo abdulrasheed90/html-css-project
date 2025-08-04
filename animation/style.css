@@ -1,0 +1,57 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #222;
+  gap: 30px;
+  margin: 0;
+}
+
+.auto-move-container {
+  display: flex;
+  gap: 20px;
+}
+
+/* Basic box style */
+.box {
+  width: 100px;
+  height: 100px;
+  border-radius: 12px;
+  background: #ff5e57;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+/* Different boxes have different moving animations */
+.box1 {
+  animation-name: moveRightLeft;
+  animation-duration: 3s;
+}
+
+.box2 {
+  background: #57a1ff;
+  animation-name: moveUpDown;
+  animation-duration: 4s;
+}
+
+.box3 {
+  background: #57ff73;
+  animation-name: moveDiagonal;
+  animation-duration: 5s;
+}
+
+@keyframes moveRightLeft {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(150px); }
+}
+
+@keyframes moveUpDown {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(100px); }
+}
+
+@keyframes moveDiagonal {
+  0%, 100% { transform: translate(0,0); }
+  50% { transform: translate(120px, 120px); }
+}

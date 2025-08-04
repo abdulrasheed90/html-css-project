@@ -1,0 +1,41 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+}
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+.sidebar {
+  background: #2c3e50;
+  color: white;
+  padding: 1rem;
+  width: 250px;
+}
+.sidebar ul {
+  list-style: none;
+}
+.sidebar li {
+  margin: 0.5rem 0;
+}
+.sidebar a {
+  color: #ecf0f1;
+  text-decoration: none;
+}
+.content {
+  flex: 1;
+  padding: 2rem;
+}
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+  }
+}
