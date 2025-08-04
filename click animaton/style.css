@@ -1,0 +1,42 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 40px;
+  background: #f0f0f0;
+  margin: 0;
+}
+
+.shape-container {
+  display: flex;
+  gap: 30px;
+}
+
+/* Default shape = square */
+.shape-box {
+  width: 120px;
+  height: 120px;
+  background-color: #ff6f61;
+  border-radius: 0;
+  cursor: pointer;
+  transition: border-radius 0.5s ease, background-color 0.3s ease;
+}
+
+/* Square */
+.shape-box.square {
+  border-radius: 0;
+  background-color: #ff6f61;
+}
+
+/* Circle */
+.shape-box.circle {
+  border-radius: 50%;
+  background-color: #61a0ff;
+}
+
+/* Rounded Rectangle */
+.shape-box.rounded {
+  border-radius: 20px;
+  background-color: #61ff9b;
+}

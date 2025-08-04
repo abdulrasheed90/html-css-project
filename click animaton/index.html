@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Click to Change Shape</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="shape-container">
+  <div class="shape-box"></div>
+  <div class="shape-box"></div>
+  <div class="shape-box"></div>
+</div>
+
+<script>
+  const boxes = document.querySelectorAll('.shape-box');
+
+  boxes.forEach(box => {
+    box.addEventListener('click', () => {
+      if (box.classList.contains('square')) {
+        box.classList.remove('square');
+        box.classList.add('circle');
+      } else if (box.classList.contains('circle')) {
+        box.classList.remove('circle');
+        box.classList.add('rounded');
+      } else {
+        box.classList.remove('rounded');
+        box.classList.add('square');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
